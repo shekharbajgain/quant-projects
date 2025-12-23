@@ -17,7 +17,11 @@ Traders often look at price, but price is a lagging indicator. This project appl
 3.  **Smoothing:** Applied rolling averages to reduce noise and isolate the signal.
 
 ## 📊 Visual Analysis
-![Derivative Analysis Graph](derivative_analysis_plot.png)
+<p align="center">
+  <img src="derivative_analysis_plot.png" width="700" alt="Derivative Analysis Graph">
+  <br>
+  <em>Figure 1: Acceleration (Purple) acting as a leading indicator for Price (Blue). Note how acceleration turns negative before the price peak.</em>
+</p>
 
 ### Key Insights
 *   **Leading Indicator:** Notice the **purple line (Acceleration)** crosses zero and turns negative *while* the price is still rising.

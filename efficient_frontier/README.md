@@ -18,7 +18,11 @@ This project explores the mathematical concept of **diversification**. By simula
     *   **Sharpe Ratio:** Risk-adjusted return measure.
 
 ## 📊 Visual Analysis
-![Efficient Frontier Graph](efficient_frontier_plot.png)
+<p align="center">
+  <img src="efficient_frontier_plot.png" width="700" alt="Efficient Frontier Graph">
+  <br>
+  <em>Figure 1: Risk vs. Return trade-off for 5,000 simulated portfolios. The "Efficient Frontier" is the upper edge of the curve.</em>
+</p>
 
 ### Key Insights
 *   **The Curve:** The parabolic shape demonstrates that you can reduce risk without sacrificing returns by mixing uncorrelated assets.

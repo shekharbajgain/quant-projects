@@ -20,15 +20,18 @@ $$ dS_t = \mu S_t dt + \sigma S_t dW_t $$
 ## 📊 Visual Analysis
 
 ### 1. The Multiverse (1,000 Simulations)
-![Monte Carlo Paths](monte_carlo_paths.png)
-*   Each line represents one possible future timeline for the stock over the next year.
-*   The spread of lines visualizes the cone of uncertainty.
+<p align="center">
+  <img src="monte_carlo_paths.png" width="700" alt="Monte Carlo Paths">
+  <br>
+  <em>Figure 1: Visualizing the cone of uncertainty. Each line represents one possible future timeline.</em>
+</p>
 
 ### 2. Probability Distribution & VaR
-![Final Price Distribution](monte_carlo_dist.png)
-*   **Expected Value:** The peak of the bell curve ($108.40).
-*   **Value at Risk (VaR):** The red dashed line ($76.52).
-*   **Interpretation:** We can say with **95% confidence** that the portfolio value will not fall below $76.52.
+<p align="center">
+  <img src="monte_carlo_dist.png" width="700" alt="Final Price Distribution">
+  <br>
+  <em>Figure 2: Distribution of final prices. The red dashed line indicates the 95% Value at Risk threshold.</em>
+</p>
 
 ## 🚀 Usage
 ```bash
