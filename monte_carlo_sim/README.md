@@ -1,37 +1,40 @@
-# Monte Carlo Risk Simulator 🎲
+# 🎲 Monte Carlo Risk Simulator
 
-## The "Why"
-"Where will Apple stock be in a year?"
-If anyone gives you a specific number, they are lying. The future is random.
+> *Quantifying uncertainty with Stochastic Calculus.*
 
-But I learned that while you can't predict the *exact* price, you can predict the *probability* of a price. That's what Monte Carlo simulations do. It's like Dr. Strange looking at 14 million possible futures.
+![Python](https://img.shields.io/badge/Python-3.9+-blue?style=flat-square&logo=python&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-Simulation-013243?style=flat-square&logo=numpy&logoColor=white)
+![Statistics](https://img.shields.io/badge/Math-Statistics-orange?style=flat-square)
 
-## The Process
-I used a model called **Geometric Brownian Motion**. It sounds fancy, but it just means:
-*   **Drift:** The stock generally goes up over time (hopefully).
-*   **Shock:** Every day, something random happens (news, earnings, tweets).
+## 🧐 Overview
+Predicting a specific future stock price is impossible. Predicting a **probability distribution** of future prices is science. This project uses Monte Carlo simulations to model thousands of potential market scenarios, allowing us to calculate **Value at Risk (VaR)**—a standard metric in institutional risk management.
 
-I wrote a Python script to simulate 1,000 different "timelines" for a single stock over the next year.
+## ⚙️ Methodology
+We model stock price evolution using **Geometric Brownian Motion (GBM)**:
 
-### The Hard Part 🤯
-Understanding the math was tough. `exp((mu - 0.5*sigma^2)*dt + sigma*sqrt(dt)*Z)`. I stared at that formula for 3 days. But once I broke it down into "Drift" vs "Randomness", it clicked.
+$$ dS_t = \mu S_t dt + \sigma S_t dW_t $$
 
-## The Result
+*   **Drift ($\mu$):** The expected return over time.
+*   **Shock ($\sigma dW_t$):** Random volatility component.
 
-### The 1,000 Futures
+## 📊 Visual Analysis
+
+### 1. The Multiverse (1,000 Simulations)
 ![Monte Carlo Paths](monte_carlo_paths.png)
-This mess of lines represents uncertainty. Most paths go up, but some crash. This is reality.
+*   Each line represents one possible future timeline for the stock over the next year.
+*   The spread of lines visualizes the cone of uncertainty.
 
-### The Distribution
+### 2. Probability Distribution & VaR
 ![Final Price Distribution](monte_carlo_dist.png)
-This is the money shot.
-*   **Mean:** $108.40 (The most likely outcome).
-*   **VaR (Value at Risk):** $76.52. This tells me: "In the worst 5% of cases, I will lose this much money."
+*   **Expected Value:** The peak of the bell curve ($108.40).
+*   **Value at Risk (VaR):** The red dashed line ($76.52).
+*   **Interpretation:** We can say with **95% confidence** that the portfolio value will not fall below $76.52.
 
-This project changed how I view risk. It's not a feeling; it's a number.
-
-## How to Run It
+## 🚀 Usage
 ```bash
-pip install -r ../requirements.txt
+# Navigate to directory
+cd monte_carlo_sim
+
+# Run the simulation
 python monte_carlo.py
 ```

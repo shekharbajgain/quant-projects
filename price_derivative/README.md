@@ -1,34 +1,34 @@
-# Price Derivative Analyzer 📉➡️📈
+# 📉 Price Derivative Analyzer
 
-## The "Why"
-I struggled with Calculus I. Derivatives felt abstract. "The slope of the tangent line"—who cares?
+> *Using Calculus to detect momentum shifts before they happen.*
 
-Then I started getting into trading. I noticed that sometimes a stock price is still going up, but it feels "tired." It's running out of steam. I realized: **That's just negative acceleration!**
+![Python](https://img.shields.io/badge/Python-3.9+-blue?style=flat-square&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-Data_Analysis-150458?style=flat-square&logo=pandas&logoColor=white)
+![Calculus](https://img.shields.io/badge/Math-Calculus-orange?style=flat-square)
 
-I built this tool to prove that Calculus isn't just for engineers—it's for traders too.
+## 🧐 Overview
+Traders often look at price, but price is a lagging indicator. This project applies **Newtonian Physics** to financial markets by calculating the velocity and acceleration of price movements. The goal is to identify when a trend is "running out of gas" (negative acceleration) before the price actually reverses.
 
-## The Process
-I created a synthetic stock price that moves in a wave. Then, I used `pandas` to calculate:
-1.  **Velocity (1st Derivative):** How fast is the price changing? ($/day)
-2.  **Acceleration (2nd Derivative):** Is the speed increasing or decreasing? ($/day²)
+## ⚙️ Methodology
+1.  **Signal Generation:** Created a synthetic price series with clear trends and reversals.
+2.  **Calculus Application:**
+    *   **Velocity ($v$):** The 1st derivative of price (Rate of Change).
+    *   **Acceleration ($a$):** The 2nd derivative of price (Change in Rate of Change).
+3.  **Smoothing:** Applied rolling averages to reduce noise and isolate the signal.
 
-### The Surprise 😲
-I expected the acceleration to just follow the price. But look at the graph below.
-
-## The Result
+## 📊 Visual Analysis
 ![Derivative Analysis Graph](derivative_analysis_plot.png)
 
-**The Purple Line (Acceleration) is the key.**
-Notice how the purple line crosses zero and goes negative *before* the blue line (Price) actually peaks?
+### Key Insights
+*   **Leading Indicator:** Notice the **purple line (Acceleration)** crosses zero and turns negative *while* the price is still rising.
+*   **Physics of Finance:** Just like a ball thrown in the air slows down before it falls, a stock trend decelerates before it reverses.
+*   **Practical Use:** This signal can help traders exit long positions early or prepare for short entries.
 
-*   **Price** is what happened.
-*   **Velocity** is what is happening.
-*   **Acceleration** is what *will* happen.
-
-This project taught me that math is a predictive tool, not just a descriptive one.
-
-## How to Run It
+## 🚀 Usage
 ```bash
-pip install -r ../requirements.txt
+# Navigate to directory
+cd price_derivative
+
+# Run the analysis
 python derivative_analysis.py
 ```
