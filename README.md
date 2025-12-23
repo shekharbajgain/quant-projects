@@ -55,5 +55,7 @@ This repository documents my journey into quantitative analysis. I've built thes
     ```
 
 ## 📬 Contact
-*   **Portfolio:** [shekharbajgain.github.io](https://shekharbajgain.github.io)
+*   **Portfolio:** [www.shekharbajgain.com.np](https://www.shekharbajgain.com.np)
+*   **LinkedIn:** [linkedin.com/in/shekharbajgain](https://www.linkedin.com/in/shekharbajgain/)
+*   **Email:** [shekharbajgain10@gmail.com](mailto:shekharbajgain10@gmail.com)
 *   **GitHub:** [@shekharbajgain](https://github.com/shekharbajgain)
